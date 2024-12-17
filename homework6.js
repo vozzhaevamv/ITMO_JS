@@ -5,16 +5,13 @@
     const headers = { "Content-Type": "application/x-www-form-urlencoded" };
     try {
         const numbersResponse = await fetch(numbersUrl);
-        if (!numbersResponse.ok) {
-            throw new Error('Ошибка при получении чисел: ' + numbersResponse.status);
-        }
         
         const { numbers } = await numbersResponse.json();
 
         const sum = numbers.map(({ value: v }) => v).reduce((x, y) => x + y, 0);
 
         
-        const surnames = ['VozzhaevSemen']; 
+        const surnames = ['Vozzhaeva471810']; 
         
         const result = `${sum} (${surnames.join(', ')})`;
 
